@@ -1,0 +1,80 @@
+% suppresses page numbering in the header for one page (usage e.g.: \suppressPagenumber{\part{Stand der Forschung}})
+\newcommand{\suppressPagenumber}[1]{{\ohead[]{} #1 \ohead[\rightline{\thepage}]{\rightline{\thepage}}}}
+
+
+% own quotation style for a big single quotation within a block of text
+\newcommand{\myQuotation}[2]{\begin{quote}\small{\textit{\enquote{#1}}} -- #2\end{quote}}
+
+
+
+% side notes with marginpar
+\newcommand{\myNote}[1]{\marginpar{\raggedleft \footnotesize \color{gray} \textit{#1}}}
+
+
+
+% cite reference with full title ahead
+\newcommand{\myCiteTitle}[1]{\citetitle{#1} (\citeauthor{#1}~\cite{#1})}
+
+
+
+
+% Image/Figure
+% Usage: \myImg{caption}{label}{width-factor}{path}
+%   Example: \myImg{Beispiel eines Datenflussdiagramms}{fig:dfd}{1}{data-flow-diagram.pdf}
+% http://www2.informatik.hu-berlin.de/~piefel/LaTeX-PS/Archive-2004/V08-grafikein.pdf
+\newcommand{\myImg}[4]{
+    \begin{figure}[h!]
+        \centering
+        \includegraphics[width=\textwidth * \real{#3}]{./img/#4}
+        \caption{\label{#2}#1}
+    \end{figure}    
+}
+\newcommand{\myImgCfg}[5]{
+    \begin{figure}[#5]
+        \centering
+        \includegraphics[width=\textwidth * \real{#3}]{./img/#4}
+        \caption{\label{#2}#1}
+    \end{figure}    
+}
+
+% Shortcut for "..Abbildung 2 zeigt.." via "..\myImgRef{fig:screenshot} zeigt.."
+\newcommand{\myImgRef}[1]{\hyperref[#1]{Abbildung~\ref*{#1}}}
+
+
+
+% Shortcut for "..Abschnitt 2 beschreibt.." via "..\myRef{Abschnitt}{chap:myrefchapter}.."
+\newcommand{\myRef}[2]{\hyperref[#2]{#1~\ref*{#2}}}
+
+
+% Shortcut for "..auf Seite 7.." via "..\myPageRef{fig:myfigure}.."
+\newcommand{\myPageRef}[1]{\hyperref[#1]{Seite~\pageref*{#1}}}
+
+
+
+% Shortcuts for frequently used strings
+\newcommand{\sczb}{z.\,B. } % zum Beispiel; added space because those phrases will never be used at the end of a sentence
+\newcommand{\scdh}{d.\,h. } % das heißt
+\newcommand{\scua}{u.\,a. } % unter anderem
+
+
+
+
+
+
+% Mathematics
+\newcommand{\powerset}[1]{\mathcal P~\left({#1}\right)}
+%\newcommand{\powerset}[1]{\wp \left({#1}\right)}
+
+
+
+% Font
+% changes font family ptm = Times, phv = Helvetica,.. http://de.wikibooks.org/wiki/LaTeX-W%C3%B6rterbuch:_fontfamily
+%\renewcommand{\familydefault}{phv}
+
+
+
+% colored box
+% see LaTeX - fcolorbox.png
+% http://www.lessjunkmorefunk.de/de/node/10
+%\definecolor{Gray}{gray}{0.9}
+%\newcommand{\inhalt}[1]{\fcolorbox{black}{Gray}{\parbox{\textwidth}{#1}}}

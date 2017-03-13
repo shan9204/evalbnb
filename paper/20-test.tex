@@ -1,0 +1,35 @@
+\chapter{Test X}
+Test der Abkürzungen.
+
+\ac{DSPL}
+
+\acs{BPEL}
+
+\acl{MAPE}
+
+%
+%
+%
+\section{Test Figure}
+
+Eine beispielhafte Vektorgrafik ist in \myImgRef{fig:test} zu sehen.
+
+\myImg{Test Figure}{fig:test}{0.8}{overview_f.pdf}
+
+Für XYZ siehe \myRef{Tabelle}{tbl:test}.
+
+% lange Tabelle über mehrere Seiten: longtabu
+{
+\tabulinesep=\tabcolsep
+\begin{longtabu} to \textwidth {|X[3]|X[7]|}
+\caption{\label{tbl:test}Test 1} \\
+\hline
+  \textbf{XYZ} & \textbf{ABC} \\
+  \hline
+  ABC & DEF \\
+  \hline
+\end{longtabu}
+}
+
+\section{Test Referenz}
+Beispiel siehe \citeauthor{marquezan_towards_2014} \cite{marquezan_towards_2014}.

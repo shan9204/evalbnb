@@ -70,8 +70,8 @@
 
 \usepackage[T1]{fontenc} % German umlauts, special chars, etc.
 \usepackage[utf8]{inputenc} % input encoding (preferably utf8 with utf8 encoding within your editor! ansinew, latin1, etc. are also possible but require you to use cumbersome workarounds to write German umlauts e.g. "u for writing an ü)
-\usepackage[ngerman]{babel} % new German spelling rules (important for hyphenation)
-\usepackage[german]{varioref} % for commands like \vref to create references like "...see figures 3.4 to 3.6 on pages 23–24..."
+%\usepackage[ngerman]{babel} % new German spelling rules (important for hyphenation)
+%\usepackage[german]{varioref} % for commands like \vref to create references like "...see figures 3.4 to 3.6 on pages 23–24..."
 
 
 % special symbols
@@ -80,13 +80,13 @@
 % strings have to be entered after utf8 has been set as input encoding
 
 % strings for the frontpage
-\newcommand{\documentType}{Masterarbeit} % Art der Arbeit: Master-/Bachelor-/Seminararbeit/etc.
-\newcommand{\documentHeading}{Titel}
+\newcommand{\documentType}{Bachelorthesis} % Art der Arbeit: Master-/Bachelor-/Seminararbeit/etc.
+\newcommand{\documentHeading}{Title}
 \newcommand{\documentLocation}{Essen} % also used as location for declaration of academic honesty / Ort in Eidesstattlicher Erklärung
 \newcommand{\documentDate}{\today}%10.\,04.\,2014} % also used as date for declaration of academic honesty / Datum in Eidesstattlicher Erklärung
 
 % PDF document metadata (the following strings must not contain line breaks, non-breaking spaces, etc.)
-\newcommand{\documentPDFauthor}{Max Mustermann}
+\newcommand{\documentPDFauthor}{Shanmathuran Sritharan}
 \newcommand{\documentPDFtitle}{\documentHeading}
 
 
@@ -280,11 +280,12 @@
 \renewcommand{\thepart}{}%\Alph{part}}
 \renewcommand{\thesubsubsection}{\Roman{subsubsection}}
 
-\renewcaptionname{ngerman}{\partname}{}
+%\renewcaptionname{ngerman}{\partname}{}
 
 % ############################## CONTENT ##############################
 
 \input{10-intro}
+\input{04-theory}
 \input{20-test}
 % ...more inputs
 %\input{99-abc}
@@ -295,12 +296,12 @@
 
 {
 \sloppy
-\printbibliography[title={\label{chap:references}Literaturverzeichnis}]{} 
+\printbibliography[title={\label{chap:references}Bibliography}]{} 
 }
 
 % ############################# APPENDIX ##############################
 
-\part*{Anhang}
+\part*{Appendix}
 \newcounter{chapterAppendix}
 \setcounter{chapterAppendix}{1}
 \renewcommand{\thechapter}{\Alph{chapterAppendix}}

@@ -1,0 +1,77 @@
+%
+%
+%
+\chapter{Theoretical Foundation}
+\label{chap:theoretical}
+
+%
+%
+%
+\section{Cloud Service Models}
+Cloud computing in general can be defined as a service for on-demand deliveryof hosted services. Looking at scientific articles in this research field many definitions can be found since some researchers define it based on the associated key components and others by its benefits. Therefore, this paper uses the most cited definition provided by the National Institute of Standards and Technology (NIST) of cloud computing as following: "cloud computing is a model for enabling ubiquitous, convenient, on-demand network access to a shared pool ofconfigurable computing resources (e.g., networks servers, storage, applicationsand services) that can be rapidly provisioned and released with minimal management effort or service provider interaction".
+
+Basically offered services of cloud computing providers are based on three fundamental models.
+\paragraph{Software-as-a-Service}
+In the service model "Software-as-a-Service" (SaaS) the application is hosted on a remote data center and provided to the customer over the Internet. A widelyknown example for SaaS is WordPress or SugarCRM. In this model the provideris responsible for software development, maintenance and required updates ofthe application. Another part of the responsibility of the provider is the supportand maintenance of the data center (Eisa et al.).
+\paragraph{Infrastructure-as-a-Service}
+In the service model "Infrastructure-as-a-Service" (IaaS) the provider provides the customer with raw infrastructure over the Internet and accessible throughWeb Services. Provided services include processing power, storage, networks orvirtual machines. The provider takes the responsibility to manage the providedinfrastructure while the customer controls the operating systems, applicationsand programming frameworks running on the cloud. A central aspect of IaaS isthe option to build a virtual data center (Zhang et al. 2010).
+\paragraph{Platform-as-a-Service}
+The service model "Platform-as-a-Service" (PaaS) provides the runtime and development environment. The services of this model are directed especiallytowards developer where the deployment of the application is performed in runtime environments which are decoupled from the corresponding programmingenvironment (NIST). PaaS offers companies the possibility to control databases withhigh workload.
+%
+%
+%
+\section{Allocation problem}
+\begin{itemize}
+	\item VM allocation problem one of the core challenges of using the cloud computing paradigm efficiently depending on cloud computing setup allocation problem varies 	\item Two dimensions of cloud computing scenarios
+	\item 1st dimension: nature of offered service differentiating between IaaS, PaaS and SaaS	\item 2nd dimension: focus whether service is provisioned in-house (private) or public or combination of two (hybrid)	\item Other classification of cloud computing focuses on service deployment scenarios	\item Assumption: service provider (SP) deploys a service on the infrastructure provided by one or more infrastructure providers (IP) 	\item Statement: in each scenario there is need to optimize allocation of VMs to physical resources optimization may be performed by different actors and might have different characteristics depending on exact setup 	\item Based on Li et al. classification VM allocation problem occurs as following: 	\item Public cloud: IP must optimize utilization of resources to find best balance between conflicting requirements 	\item Private: same optimization problem occurs for provider that act as SP and IP 	\item Bursted: 	\item IP must sole same kind of optimization as above 	\item SP must solve similar problem for own resources extended by possibility to off-load some VMs to external IP 	\item Federated: IP must solve optimization problem similar to SP 	\item Multicloud: 	\item IP must solve same optimization problem as in public cloud	\item SP must solve optimization problem where optimal allocation of parts of service to IP is defined	\item Cloud broker: same as multicloud scenario where broker owns role of SP	\item Assumption: cloud provider (CP) must allocate VMs to a set of available resources resources either belong to CP or rented from external cloud providers (eCP)
+\end{itemize}
+
+
+%
+%
+%
+\section{CloudSim}
+CloudSim is an extensible simulation framework proposed by \citeauthor{calheiros_2011} as a solution to overcome the challenges in regard to the evaluation of the performance of cloud provisioning policies, application workload models and resources performance models under changing system and user configurations \cite{calheiros_2011}. The core focus of the toolkit is to enable "seamless modeling, simulation, and experimentation of emerging Cloud computing infrastructures and application services" \cite{calheiros_2011}.
+\subsection{CloudSim architecture}
+
+Figure 2.1 shows the multi-layered architecture of CloudSim \myImgRef{fig:cloudsim_architecture}.
+\myImg{CloudSim Architecture}{fig:cloudsim_architecture}{1.1}{cloudsim_architecture.png}
+
+\begin{itemize}
+   \item \textbf{User code layer:}exposes basic entities for hosts (e.g. number of machines, specification etc), applications, VMs and number of users -> enables to generate workload request distributions, application configurations, model Cloud availability, scenarios and perform robust tests
+   --> directly available to end-users
+   \item \textbf{User-level middleware(SaaS): } includes software framework like Web 2.0 Interfaces
+   -> helps developers to create cost-effective user-interfaces 
+   \item \textbf{Core middleware(PaaS): } implements platform-level services to provide run-time environment for hosting and managing User-level application services
+   \item \textbf{System Level(IaaS): } contains physical resources to power data centers
+   \item \textbf{Simulation layer:} provides support for modeling and simulation of virtualized Cloud-based data center environments -> handling of provisioning of hosts to VMs, managing application execution and monitoring of dynamic system state  
+    
+\end{itemize}
+\myImgRef{fig:cloudsim_classdesign}.
+\myImg{CloudSim Class Design}{fig:cloudsim_classdesign}{1.1}{cloudsim_classdesign.png}
+
+ \subsection{Advantages}
+\begin{itemize}
+   \item \textbf{IT companies:} allows to test their services in repeatable and controllable environment
+   \item \textbf{} allows to tune system bottlenecks before deplyoying on real cloud
+   \item \textbf{} enables to experiment with different workload 
+\end{itemize}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

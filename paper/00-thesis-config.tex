@@ -38,7 +38,8 @@
 }
 
 % Shortcut for "..Abbildung 2 zeigt.." via "..\myImgRef{fig:screenshot} zeigt.."
-\newcommand{\myImgRef}[1]{\hyperref[#1]{Abbildung~\ref*{#1}}}
+%\newcommand{\myImgRef}[1]{\hyperref[#1]{Abbildung~\ref*{#1}}}
+\newcommand{\myImgRef}[1]{\hyperref[#1]{Figure~\ref*{#1}}}
 
 
 
@@ -47,7 +48,8 @@
 
 
 % Shortcut for "..auf Seite 7.." via "..\myPageRef{fig:myfigure}.."
-\newcommand{\myPageRef}[1]{\hyperref[#1]{Seite~\pageref*{#1}}}
+%\newcommand{\myPageRef}[1]{\hyperref[#1]{Seite~\pageref*{#1}}}
+\newcommand{\myPageRef}[1]{\hyperref[#1]{Page~\pageref*{#1}}}
 
 
 

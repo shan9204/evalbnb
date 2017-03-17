@@ -172,7 +172,7 @@ local.properties
 *.mtc1
 *.out
 *.synctex.gz
-*.pdf
+paper/*.pdf
 .texpadtmp/
 
 # Mac IDE files

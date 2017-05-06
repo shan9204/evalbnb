@@ -25,6 +25,9 @@ hs_err_pid*
 .idea/**/dynamic.xml
 .idea/**/uiDesigner.xml
 
+# XCode files:
+*.xcodeproj
+
 # Gradle:
 .idea/**/gradle.xml
 .idea/**/libraries

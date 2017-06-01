@@ -1,11 +1,11 @@
 package org.cloudbus.cloudsim.examples.power.planetlab;
 
-import java.util.Calendar;
-
 import org.cloudbus.cloudsim.Log;
 import org.cloudbus.cloudsim.core.CloudSim;
 import org.cloudbus.cloudsim.examples.power.Helper;
 import org.cloudbus.cloudsim.examples.power.RunnerAbstract;
+
+import java.util.Calendar;
 
 /**
  * The example runner for the PlanetLab workload.
@@ -63,7 +63,7 @@ public class PlanetLabRunner extends RunnerAbstract {
 	@Override
 	protected void init(String inputFolder) {
 		try {
-			CloudSim.init(1, Calendar.getInstance(), false);
+			CloudSim.init(1, Calendar.getInstance(), true);
 
 			broker = Helper.createBroker();
 			int brokerId = broker.getId();

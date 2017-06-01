@@ -55,12 +55,12 @@ bool GreedyAllocator::pm_less_numvm(PM *a, PM *b)
 }
 
 
-/*
+
 bool GreedyAllocator::vm_less(VM *a, VM *b)
 {
 	return a->demand[0]>b->demand[0];
 }
-*/
+
 
 
 PM * GreedyAllocator::find_pm_for_vm(VM * vm)

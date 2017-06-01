@@ -46,7 +46,7 @@ struct AllocatorParams
 
 static AllocatorType stringToAllocatorType(const std::string& toConvert)
 {
-	if (toConvert == "BnB")
+	if (toConvert.find("BnB") != std::string::npos)
 	{
 		return BnB;
 	}
@@ -60,6 +60,7 @@ static AllocatorType stringToAllocatorType(const std::string& toConvert)
 	}
 	else
 	{
+		std::cout << toConvert << std::endl;
 		std::cout << "WARNING: Invalid Allocator Type. Defaulting to BnB." << std::endl;
 		return BnB;
 	}

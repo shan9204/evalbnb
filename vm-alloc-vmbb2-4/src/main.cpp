@@ -35,14 +35,14 @@ Result files are created in the .\logs folder.
 #include <memory>
 
 #include "BnBAllocator.h"
-#include "ILPAllocator.h"
+#include "IlpAllocator.h"
 #include "AllocationProblem.h"
 #include "ProblemGenerator.h"
 #include "Timer.h"
 #include "AllocatorParams.h"
 #include "Utils.h"
 #include "ConfigParser.h"
-#include "GreedyAllocator.h"
+//#include "GreedyAllocator.h"
 
 using std::cout;
 using std::vector;
@@ -179,7 +179,7 @@ int main()
 				}
 				else if (paramsList[i]->allocatorType == Greedy)
 				{
-					vmAllocator = std::make_shared<GreedyAllocator>(problem, paramsList[i], log);
+					//vmAllocator = std::make_shared<GreedyAllocator>(problem, paramsList[i], log);
 				}
 				double loBo=vmAllocator->getLowerBound();
 				lowerBounds.push_back(loBo);

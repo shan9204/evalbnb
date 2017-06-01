@@ -15,7 +15,7 @@ EXES                  = vmallocation.exe
 ### Common settings
 
 CEXTRA                =
-CXXEXTRA              = -std=c++11
+CXXEXTRA              = -std=c++14
 RCEXTRA               =
 DEFINES               = -DSTRICT
 INCLUDE_PATH          = -I.
@@ -34,14 +34,14 @@ vmallocation_exe_CXX_SRCS= PM.cpp \
 			ProblemGenerator.cpp \
 			Timer.cpp \
 			VM.cpp \
-			ILPAllocator.cpp \
+			IlpAllocator.cpp \
 			main.cpp \
             ConfigParser.cpp \
-vmallocation_exe_RC_SRCS=
-vmallocation_exe_LDFLAGS= 
+#vmallocation_exe_RC_SRCS=
+vmallocation_exe_LDFLAGS=
 vmallocation_exe_ARFLAGS=
 vmallocation_exe_DLL_PATH=
-vmallocation_exe_DLLS = 
+vmallocation_exe_DLLS =
 vmallocation_exe_LIBRARY_PATH=
 vmallocation_exe_LIBRARIES=
 
@@ -114,5 +114,3 @@ DEFLIB = $(LIBRARY_PATH) $(LIBRARIES) $(DLL_PATH) $(DLL_IMPORTS:%=-l%)
 
 $(vmallocation_exe_MODULE): $(vmallocation_exe_OBJS)
 	$(CXX) $(vmallocation_exe_LDFLAGS) -o $@ $(vmallocation_exe_OBJS) $(vmallocation_exe_LIBRARY_PATH) $(vmallocation_exe_DLL_PATH) $(DEFLIB) $(vmallocation_exe_DLLS:%=-l%) $(vmallocation_exe_LIBRARIES:%=-l%)
-
-

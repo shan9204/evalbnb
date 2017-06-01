@@ -48,7 +48,7 @@ void ConfigParser::parse()
 	std::string line;
 	while (std::getline(configFile, line))
 	{
-		if (line == "Allocator{")
+		if (line.find("Allocator{") != std::string::npos)
 		{
 			processAllocator(configFile);
 		}

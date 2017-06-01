@@ -49,19 +49,19 @@ struct BnBParams : public AllocatorParams
 
 static SortType stringToSortType(const std::string& toConvert)
 {
-	if (toConvert == "NONE")
+	if (toConvert.find("NONE") != std::string::npos)
 	{
 		return NONE;
 	}
-	else if (toConvert == "LEXICOGRAPHIC")
+	else if (toConvert.find("LEXICOGRAPHIC") != std::string::npos)
 	{
 		return LEXICOGRAPHIC;
 	}
-	else if (toConvert == "MAXIMUM")
+	else if (toConvert.find("MAXIMUM") != std::string::npos)
 	{
 		return MAXIMUM;
 	}
-	else if (toConvert == "SUM")
+	else if (toConvert.find("SUM") != std::string::npos)
 	{
 		return SUM;
 	}
